@@ -14,10 +14,13 @@ import android.widget.Toast;
 
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
+import com.example.manue.elgourmet.fragments.InsertarComentarioFragment;
 import com.example.manue.elgourmet.fragments.detallefragment;
 
 public class DetailsActivity  extends AppCompatActivity {
 
+
+    private Button comentarios;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,15 @@ public class DetailsActivity  extends AppCompatActivity {
             detallefragment fragment = (detallefragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
             fragment.mostrarReceta(receta);
         }
+
+        comentarios = findViewById(R.id.detalleBoton);
+        comentarios.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(DetailsActivity.this, InsertarComentarioActivity.class);
+                startActivity(intent2);
+            }
+        });
 
     }
     @Override

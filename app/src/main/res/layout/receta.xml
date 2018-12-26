@@ -28,26 +28,34 @@
             android:textAlignment="center"
             android:textColor="#FFF" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:orientation="vertical">
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:alpha="0.41">
+            </View>
 
             <TextView
+
                 android:id="@+id/nombreReceta"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingTop="8dp"
                 android:text="TITULO"
                 android:textSize="16dp"
-                android:textColor="#000"
+                android:textColor="#fff"
+                android:textAllCaps="true"
                 android:textStyle="bold"
 
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 

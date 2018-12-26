@@ -1,42 +1,22 @@
 package com.example.manue.elgourmet.activities;
 
-
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.manue.elgourmet.R;
-import com.example.manue.elgourmet.Util.Receta;
-import com.example.manue.elgourmet.fragments.RecetasFragment;
 
-
-public class MainActivity extends AppCompatActivity implements RecetasFragment.OnRecetaSelected {
-
+public class InsertarComentarioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
+        setContentView(R.layout.activity_insertar_comentario);
     }
-
-        @Override
-        public void onChange(Receta receta) {
-            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-            intent.putExtra("Receta", receta);
-            startActivity(intent);
-        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements RecetasFragment.O
                 Toast.makeText(this, "Prueba favoritos", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.agregarReceta:
-                Intent intent = new Intent(MainActivity.this, AgregarActivity.class);
+                Intent intent = new Intent(InsertarComentarioActivity.this, AgregarActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.misrecetas:
