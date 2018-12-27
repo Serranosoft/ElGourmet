@@ -3,6 +3,8 @@ package com.example.manue.elgourmet.activities;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
+import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,21 +15,23 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.manue.elgourmet.Database.DataBaseRoom;
 import com.example.manue.elgourmet.R;
+import com.example.manue.elgourmet.Util.Comentario;
 import com.example.manue.elgourmet.Util.Receta;
 import com.example.manue.elgourmet.fragments.RecetasFragment;
+
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements RecetasFragment.OnRecetaSelected {
 
 
+    private DataBaseRoom dbRoom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 
     }
 
@@ -62,4 +66,8 @@ public class MainActivity extends AppCompatActivity implements RecetasFragment.O
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 }
+
+

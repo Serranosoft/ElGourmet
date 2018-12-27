@@ -18,6 +18,8 @@ public class InsertarComentarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_insertar_comentario);
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
