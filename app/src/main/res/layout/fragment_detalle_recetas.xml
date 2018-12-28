@@ -11,7 +11,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragments.detallefragment">
@@ -78,6 +78,7 @@
         />
 
     <TextView
+        android:id="@+id/detalleIngredientesTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -87,23 +88,24 @@
         android:text="Ingredientes"
         android:textSize="16dp"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/detalleIngredientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/detalleIngredientesTitulo"
         android:textColor="@android:color/white"
         android:text=""
         android:layout_marginRight="16dp"
         android:textSize="12dp" />
     <TextView
+        android:id="@+id/detalleElaboracionTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="270dp"
+        android:layout_below="@id/detalleIngredientes"
         android:textColor="@android:color/white"
         android:text="Elaboración"
         android:textSize="16dp"
@@ -113,16 +115,13 @@
         android:id="@+id/detalleElaboracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="16dp"
         android:textColor="@android:color/white"
+        android:layout_below="@id/detalleElaboracionTitulo"
         android:text="Elaboración de la receta"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="48dp"
         android:textSize="12dp" />
-
-
 
 
     <Button
@@ -130,10 +129,10 @@
         android:text="Comentarios"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_above="@id/detalleElaboracion"
+        android:layout_below="@id/detalleElaboracion"
         android:background="@drawable/boton"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         />
 

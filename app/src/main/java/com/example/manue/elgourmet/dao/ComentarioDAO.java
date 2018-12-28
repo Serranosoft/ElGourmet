@@ -14,9 +14,6 @@ public interface ComentarioDAO {
     @Insert
     public long insertComentario(Comentario comentario);
 
-    @Query("SELECT nombre, asunto, comentario FROM comentarios")
-    public Comentario getComentario(long id);
-
     @Query("SELECT * FROM comentarios")
     public List<Comentario> getComentarios();
 }

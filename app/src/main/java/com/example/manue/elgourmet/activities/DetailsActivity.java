@@ -1,7 +1,6 @@
 package com.example.manue.elgourmet.activities;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
-import com.example.manue.elgourmet.fragments.InsertarComentarioFragment;
+import com.example.manue.elgourmet.fragments.RecetasFragment;
 import com.example.manue.elgourmet.fragments.detallefragment;
 
 public class DetailsActivity  extends AppCompatActivity {
@@ -43,6 +42,7 @@ public class DetailsActivity  extends AppCompatActivity {
         });
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

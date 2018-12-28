@@ -1,6 +1,7 @@
 package com.example.manue.elgourmet.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,19 +37,16 @@ public class detallefragment extends Fragment {
     }
 
 
-
-    private List<Receta> recetaLista;
-    private RequestQueue mRequestQueue;
-
     ImageView imagen;
     TextView titulo;
     TextView ingredientes;
     TextView elaboracion;
     Button link;
     Button comentarios;
+    Button favoritos;
+    String url;
+    String web;
 
-
-    private static final String api = "https://www.themealdb.com/api/json/v1/1/latest.php";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,33 +61,37 @@ public class detallefragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_detalle_recetas, container, false);
 
-
-        recetaLista = new ArrayList<>();
         imagen = view.findViewById(R.id.detalleImagen);
         titulo = view.findViewById(R.id.detalleTitulo);
         ingredientes = view.findViewById(R.id.detalleIngredientes);
         elaboracion = view.findViewById(R.id.detalleElaboracion);
         link = view.findViewById(R.id.iconoLink);
         comentarios = view.findViewById(R.id.detalleBoton);
+        favoritos = view.findViewById(R.id.iconoFavorito);
         return view;
     }
 
 
     public void mostrarReceta(final Receta receta){
 
-        String url = receta.getImagenUrl();
+        url = receta.getImagenUrl();
         Picasso.get().load(url).fit().into(imagen);
         titulo.setText(receta.getNombreReceta());
         for (int i = 0; i<20;i++){
-            ingredientes.append(receta.getIngredientes()[i]+" ,");
+            if(receta.getIngredientes()[i].equals("")){
+
+            }else{
+                ingredientes.append("• "+receta.getIngredientes()[i]+"\n"+"\n");
+            }
+
         }
         elaboracion.setText(receta.getInstruccionesReceta());
-
+        web = receta.getUrl();
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(receta.getUrl().equals("")){
+                if(web.equals("")){
                     Toast.makeText(getActivity(), "Esta receta no tiene página web de referencia o video tutorial", Toast.LENGTH_SHORT).show();
                 }else{
                     Uri uri = Uri.parse(receta.getUrl());
@@ -101,20 +103,7 @@ public class detallefragment extends Fragment {
             }
         });
 
-        /*.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DetailsActivity., InsertarComentarioFragment.class);
-            }
-        });*/
-
-
-
-
 
     }
-
-
-
 
 }

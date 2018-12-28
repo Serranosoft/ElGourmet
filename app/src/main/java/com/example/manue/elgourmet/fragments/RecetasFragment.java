@@ -73,10 +73,10 @@ public class RecetasFragment extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("meals");
-                            String[] ingredientes = new String[20];
+
                             for(int i = 0; i < jsonArray.length() ; i++){
                                 JSONObject receta = jsonArray.getJSONObject(i);
-
+                                String[] ingredientes = new String[20];
                                 String nombreReceta = receta.getString("strMeal");
                                 String imagenUrl = receta.getString("strMealThumb");
 

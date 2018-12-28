@@ -14,9 +14,9 @@ public abstract class DataBaseRoom extends RoomDatabase {
     public abstract ComentarioDAO comentarioDAO();
     private static DataBaseRoom INSTANCE = null;
 
-    public static DataBaseRoom getINSTANCE(final Context context){
+    public static DataBaseRoom getInstance(final Context context){
         if(INSTANCE == null){
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), DataBaseRoom.class, "el-gourmet.db").fallbackToDestructiveMigration().build();
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), DataBaseRoom.class, "elgourmet.db").fallbackToDestructiveMigration().build();
 
 
         }

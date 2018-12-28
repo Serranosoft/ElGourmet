@@ -4,15 +4,13 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
+
 @Entity(tableName = "comentarios")
-public class Comentario {
+public class Comentario{
 
     @PrimaryKey(autoGenerate = true)
     private long id;
-    @NonNull
-    private String nombre;
-    @NonNull
-    private String asunto;
     @NonNull
     private String comentario;
 
@@ -20,16 +18,12 @@ public class Comentario {
 
     }
 
-    public Comentario(long id, String nombre, String asunto, String comentario) {
+    public Comentario(long id,String comentario) {
         this.id = id;
-        this.nombre = nombre;
-        this.asunto = asunto;
         this.comentario = comentario;
     }
 
-    public Comentario(String nombre, String asunto, String comentario) {
-        this.nombre = nombre;
-        this.asunto = asunto;
+    public Comentario( String comentario) {
         this.comentario = comentario;
     }
 
@@ -41,22 +35,7 @@ public class Comentario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getAsunto() {
-        return asunto;
-    }
-
-    public void setAsunto(String asunto) {
-        this.asunto = asunto;
-    }
-
+    @NonNull
     public String getComentario() {
         return comentario;
     }
@@ -64,4 +43,5 @@ public class Comentario {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
+
 }

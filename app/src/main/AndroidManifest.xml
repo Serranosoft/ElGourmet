@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/chef2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity"
-            >
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:icon="@mipmap/chef2"
             android:name=".activities.DetailsActivity"
+            android:icon="@mipmap/chef2"
             android:label="Receta"
             android:parentActivityName=".activities.MainActivity">
             <meta-data
@@ -31,11 +30,11 @@
         <activity
             android:name=".activities.AgregarActivity"
             android:label="Agregar Receta"
-            android:parentActivityName=".activities.MainActivity"></activity>
-
-        <activity android:name=".activities.InsertarComentarioActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.InsertarComentarioActivity"
             android:label="Comentarios"
-            android:parentActivityName=".activities.MainActivity"></activity>
+            android:parentActivityName=".activities.MainActivity" />
     </application>
 
 </manifest>
