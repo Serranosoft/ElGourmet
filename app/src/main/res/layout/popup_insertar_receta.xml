@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Añadir receta"
+        android:id="@+id/popupInsertarRecetaTitulo"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/button_color">
+
+    </TextView>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/preview"
+        android:id="@+id/popupInsertarRecetaImagen"
+        android:hint="Url de la Imagen...">
+
+
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="149dp"
+        android:layout_height="89dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/test"
+
+        />
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/popupInsertarRecetaImagen"
+        android:id="@+id/popupInsertarRecetaNombre"
+        android:hint="Nombre...">
+
+    </EditText>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/popupInsertarRecetaNombre"
+        android:id="@+id/popupInsertarRecetaIngredientes"
+        android:hint="Ingredientes...">
+
+    </EditText>
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/popupInsertarRecetaIngredientes"
+        android:id="@+id/popupInsertarRecetaElaboracion"
+        android:hint="Elaboracion...">
+
+    </EditText>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popupInsertarRecetaElaboracion"
+        android:id="@+id/popupInsertarRecetaAñadir"
+        android:text="Añadir"
+        android:textColor="@android:color/white"
+        android:background="@color/button_color">
+
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popupInsertarRecetaAñadir"
+        android:id="@+id/popupInsertarRecetaCancelar"
+        android:text="Cancelar"
+        android:textColor="@android:color/white"
+        android:background="@color/button_color"
+        android:layout_marginTop="10dp">
+
+
+    </Button>
+
+
+
+</RelativeLayout>

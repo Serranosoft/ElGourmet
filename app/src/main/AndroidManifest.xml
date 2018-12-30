@@ -28,13 +28,11 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.AgregarActivity"
-            android:label="Agregar Receta"
-            android:parentActivityName=".activities.MainActivity" />
-        <activity
             android:name=".activities.InsertarComentarioActivity"
             android:label="Comentarios"
             android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.misRecetasActivity"
+            android:parentActivityName=".activities.MainActivity"/>
     </application>
 
 </manifest>

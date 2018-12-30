@@ -79,15 +79,9 @@ public class InsertarComentarioActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.favoritos:
-                Toast.makeText(this, "Prueba favoritos", Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.agregarReceta:
-                Intent intent = new Intent(InsertarComentarioActivity.this, AgregarActivity.class);
-                startActivity(intent);
-                return true;
             case R.id.misrecetas:
-                Toast.makeText(this, "Prueba misrecetas", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(InsertarComentarioActivity.this, misRecetasActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

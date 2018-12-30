@@ -43,9 +43,9 @@ public class detallefragment extends Fragment {
     TextView elaboracion;
     Button link;
     Button comentarios;
-    Button favoritos;
     String url;
     String web;
+
 
 
     @Override
@@ -67,7 +67,6 @@ public class detallefragment extends Fragment {
         elaboracion = view.findViewById(R.id.detalleElaboracion);
         link = view.findViewById(R.id.iconoLink);
         comentarios = view.findViewById(R.id.detalleBoton);
-        favoritos = view.findViewById(R.id.iconoFavorito);
         return view;
     }
 
@@ -102,8 +101,6 @@ public class detallefragment extends Fragment {
 
             }
         });
-
-
     }
 
 }

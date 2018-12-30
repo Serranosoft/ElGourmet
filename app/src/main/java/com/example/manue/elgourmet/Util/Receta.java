@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Receta implements Serializable {
 
+
     private String imagenUrl;
     private String nombreReceta;
     private String instruccionesReceta;

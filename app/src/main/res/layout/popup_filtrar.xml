@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Filtrar Recetas"
+        android:text="@string/filtrarRecetas"
         android:id="@+id/popupTitulo"
         android:textSize="20dp"
         android:paddingBottom="20dp"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/popupTitulo"
         android:id="@+id/ingrediente"
-        android:hint="Ingrediente...">
+        android:hint="@string/filtrarIngrediente">
 
     </EditText>
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ingrediente"
         android:id="@+id/popupFiltrar"
-        android:text="Filtrar"
+        android:text="@string/filtrar"
         android:textColor="@android:color/white"
         android:background="@color/button_color"
         android:layout_marginTop="10dp">
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/popupFiltrar"
         android:id="@+id/mostrarTodo"
-        android:text="Mostrar todas las recetas"
+        android:text="@string/mostrarRecetas"
         android:textColor="@android:color/white"
         android:background="@color/button_color"
         android:layout_marginTop="10dp">

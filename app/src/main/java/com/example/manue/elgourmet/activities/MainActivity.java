@@ -40,17 +40,9 @@ public class MainActivity extends AppCompatActivity implements RecetasFragment.O
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.favoritos:
-                Toast.makeText(this, "Prueba favoritos", Toast.LENGTH_LONG).show();
-                //Intent intent1 = new Intent(MainActivity.this, Favoritos.class);
-                //startActivity(intent1);
-                return true;
-            case R.id.agregarReceta:
-                Intent intent2 = new Intent(MainActivity.this, AgregarActivity.class);
-                startActivity(intent2);
-                return true;
             case R.id.misrecetas:
-                Toast.makeText(this, "Prueba misrecetas", Toast.LENGTH_LONG).show();
+                Intent intent3 = new Intent(MainActivity.this, misRecetasActivity.class);
+                startActivity(intent3);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

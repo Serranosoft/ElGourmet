@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="@color/colorPrimary"
+    android:background="@color/background"
 
     >
 
@@ -11,7 +11,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:id="@+id/imagenVerComentario"
-        android:src="@drawable/anonimo"/>
+        android:src="@drawable/anonymous"/>
 
 
     <LinearLayout
@@ -20,7 +20,7 @@
         android:layout_marginStart="5dp"
         android:orientation="vertical"
         android:layout_toEndOf="@id/imagenVerComentario"
-        android:background="@color/colorPrimary">
+        android:background="@color/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:textColor="@android:color/white"
             android:id="@+id/username"
             android:paddingLeft="8dp"
-            android:text="Anónimo"/>
+            android:text="@string/anonimo"/>
 
         <TextView
             android:layout_width="wrap_content"

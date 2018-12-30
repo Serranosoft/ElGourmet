@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/background"
     android:padding="16dp"
     tools:context=".fragments.InsertarComentarioFragment">
 
@@ -25,7 +25,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/imagenComentario"
-                    android:hint="Añadir comentario..."
+                    android:hint="@string/añadirComentario"
                     android:id="@+id/comentario"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/post"
-                    android:text="Enviar"
+                    android:text="@string/enviar"
                     android:layout_marginEnd="5dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
