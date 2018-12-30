@@ -9,11 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
-import com.example.manue.elgourmet.fragments.RecetasFragment;
 import com.example.manue.elgourmet.fragments.detallefragment;
 
 public class DetailsActivity  extends AppCompatActivity {

@@ -46,11 +46,15 @@ public class RecetasFragment extends Fragment {
     private OnRecetaSelected callback;
 
     private FloatingActionButton floating;
+    private FloatingActionButton floatingRandom;
     private AlertDialog.Builder builder;
     private AlertDialog dialog;
 
+    private Button back;
+
 
     private static final String api = "https://www.themealdb.com/api/json/v1/1/latest.php";
+    private static final String random = "https://www.themealdb.com/api/json/v1/1/random.php";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -80,6 +84,28 @@ public class RecetasFragment extends Fragment {
             }
         });
 
+        back = view.findViewById(R.id.back);
+        back.setVisibility(View.INVISIBLE);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getData();
+                back.setVisibility(View.INVISIBLE);
+                floating.show();
+            }
+        });
+
+        floatingRandom = view.findViewById(R.id.random);
+        floatingRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getRandomData();
+                back.setVisibility(View.VISIBLE);
+                floating.hide();
+            }
+        });
 
         return view;
     }
@@ -110,7 +136,6 @@ public class RecetasFragment extends Fragment {
         mostrarTodo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recetaLista.clear();
                 getData();
                 dialog.dismiss();
             }
@@ -122,6 +147,7 @@ public class RecetasFragment extends Fragment {
     }
 
     private void getData() {
+        recetaLista.clear();
         mRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, api, null,
                 new Response.Listener<JSONObject>() {
@@ -273,6 +299,82 @@ public class RecetasFragment extends Fragment {
         });
         mRequestQueue.add(request);
     }
+
+    private void getRandomData() {
+        recetaLista.clear();
+        mRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, random, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("meals");
+
+                            for(int i = 0; i < jsonArray.length() ; i++){
+                                JSONObject receta = jsonArray.getJSONObject(i);
+                                String[] ingredientes = new String[20];
+                                String nombreReceta = receta.getString("strMeal");
+                                String imagenUrl = receta.getString("strMealThumb");
+
+                                ingredientes[0] = receta.getString("strIngredient1");
+                                ingredientes[1] = receta.getString("strIngredient2");
+                                ingredientes[2] = receta.getString("strIngredient3");
+                                ingredientes[3] = receta.getString("strIngredient4");
+                                ingredientes[4] = receta.getString("strIngredient5");
+                                ingredientes[5] = receta.getString("strIngredient6");
+                                ingredientes[6] = receta.getString("strIngredient7");
+                                ingredientes[7] = receta.getString("strIngredient8");
+                                ingredientes[8] = receta.getString("strIngredient9");
+                                ingredientes[9] = receta.getString("strIngredient10");
+                                ingredientes[10] = receta.getString("strIngredient11");
+                                ingredientes[11] = receta.getString("strIngredient12");
+                                ingredientes[12] = receta.getString("strIngredient13");
+                                ingredientes[13] = receta.getString("strIngredient14");
+                                ingredientes[14] = receta.getString("strIngredient15");
+                                ingredientes[15] = receta.getString("strIngredient16");
+                                ingredientes[16] = receta.getString("strIngredient17");
+                                ingredientes[17] = receta.getString("strIngredient18");
+                                ingredientes[18] = receta.getString("strIngredient19");
+                                ingredientes[19] = receta.getString("strIngredient20");
+
+                                String elaboracion = receta.getString("strInstructions");
+
+                                String url = receta.getString("strSource");
+
+                                Receta r2 = new Receta(imagenUrl, nombreReceta, elaboracion, ingredientes, url);
+                                    recetaLista.add(r2);
+
+
+
+
+                            }
+
+                            adapter2 = new RecetasFiltrarAdapter(recetaLista, getActivity().getApplicationContext(), new RecetasFiltrarAdapter.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(Receta receta, int position) {
+                                    callback.onChange(receta);
+                                }
+                            });
+
+                            rList.setAdapter(adapter2);
+                            adapter.notifyItemRangeChanged(0, 8);
+                            adapter.notifyDataSetChanged();
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Volley", error.toString());
+
+            }
+        });
+        mRequestQueue.add(request);
+    }
+
+
 
     @Override
     public void onAttach(Context context) {

@@ -33,7 +33,6 @@ public class misRecetasActivity extends AppCompatActivity implements MisRecetasA
     private MisRecetasAdapter misRecetasAdapter;
     List<MiReceta> listaMisRecetas = new ArrayList<>();
     private DataBaseRoom dbRoom;
-    private MisRecetasAdapter.OnButtonClickedListener listener;
 
     private AlertDialog.Builder builder;
     private AlertDialog dialog;
@@ -54,17 +53,6 @@ public class misRecetasActivity extends AppCompatActivity implements MisRecetasA
 
             }
         });
-
-       /* Button eliminar = findViewById(R.id.misrecetasEliminar);
-        eliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onButtonCliked();
-                eliminarRecetaDb();
-                onButtonCliked(v,);
-
-            }
-        });*/
 
         dbRoom= DataBaseRoom.getInstance(this);
         new GetAsyncProducts().execute();

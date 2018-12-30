@@ -7,7 +7,6 @@ import android.content.Context;
 
 import com.example.manue.elgourmet.Util.Comentario;
 import com.example.manue.elgourmet.Util.MiReceta;
-import com.example.manue.elgourmet.Util.Receta;
 import com.example.manue.elgourmet.dao.ComentarioDAO;
 import com.example.manue.elgourmet.dao.misRecetasDAO;
 

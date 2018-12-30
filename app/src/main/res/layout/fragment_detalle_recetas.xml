@@ -57,7 +57,6 @@
         android:layout_marginTop="16dp"
         android:layout_below="@id/detalleImagen"
         android:layout_marginRight="16dp"
-        android:textColor="#FFF"
         />
 
     <TextView
