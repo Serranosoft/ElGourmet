@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.example.manue.elgourmet.activities.DetailsActivity;
+import com.example.manue.elgourmet.activities.InsertarComentarioActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -73,6 +74,7 @@ public class detallefragment extends Fragment {
 
     public void mostrarReceta(final Receta receta){
 
+        ingredientes.setText("");
         url = receta.getImagenUrl();
         Picasso.get().load(url).fit().into(imagen);
         titulo.setText(receta.getNombreReceta());
@@ -81,6 +83,7 @@ public class detallefragment extends Fragment {
 
             }else{
                 ingredientes.append("• "+receta.getIngredientes()[i]+"\n"+"\n");
+
             }
 
         }
@@ -99,6 +102,14 @@ public class detallefragment extends Fragment {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        comentarios.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(getContext(), InsertarComentarioActivity.class);
+                startActivity(intent2);
             }
         });
     }

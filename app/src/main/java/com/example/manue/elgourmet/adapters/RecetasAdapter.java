@@ -37,8 +37,6 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
         ViewHolder viewHolder = new ViewHolder(view);
 
 
-
-
         return viewHolder;
 
 
@@ -78,7 +76,6 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
-
 
 
             nombreReceta = itemView.findViewById(R.id.nombreReceta);

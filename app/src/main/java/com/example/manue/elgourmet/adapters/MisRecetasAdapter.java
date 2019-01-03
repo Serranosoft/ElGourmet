@@ -25,6 +25,8 @@ public class MisRecetasAdapter extends RecyclerView.Adapter<MisRecetasAdapter.Vi
     private Context context;
     private OnButtonClickedListener listener;
 
+    private String url = "http://i68.tinypic.com/53oh34.jpg";
+
     public MisRecetasAdapter(List<MiReceta> recetas, Context context, OnButtonClickedListener listener) {
         this.misRecetas = recetas;
         this.context = context;
@@ -53,13 +55,12 @@ public class MisRecetasAdapter extends RecyclerView.Adapter<MisRecetasAdapter.Vi
 
 
 
-        String url = "http://i68.tinypic.com/53oh34.jpg";
-        if(miReceta.getImagenUrl().equals("")){
+
+        if(miReceta.getImagenUrl().equals("") || miReceta.getImagenUrl().equals("\n")){
             Picasso.get().load(url).fit().into(viewHolder.imagenUrl);
         }else{
             Picasso.get().load(miReceta.getImagenUrl()).fit().into(viewHolder.imagenUrl);
         }
-
 
 
 

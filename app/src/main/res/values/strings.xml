@@ -11,11 +11,19 @@
     <string name="anonimo">Anónimo</string>
     <string name="ingredientes">Ingredientes</string>
     <string name="elaboracion">Elaboracion</string>
-    <string name="comentarios">Discusión</string>
+    <string name="comentarios">Comentarios</string>
     <string name="añadirComentario">Añadir comentario...</string>
     <string name="enviar">Enviar</string>
     <string name="filtrarIngrediente">Ingrediente...</string>
     <string name="filtrar">Filtrar</string>
     <string name="mostrarRecetas">Mostrar todas las recetas</string>
     <string name="filtrarRecetas">Filtrar recetas</string>
+    <string name="urlImagen">Url de la imagen...</string>
+    <string name="nombrePopup">Nombre...</string>
+    <string name="ingredientesPopup">Ingredientes...</string>
+    <string name="elaboracionPopup">Elaboracion...</string>
+    <string name="añadir">Añadir</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="añadirReceta">Añadir Receta</string>
+
 </resources>

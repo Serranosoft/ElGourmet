@@ -12,23 +12,43 @@ import android.widget.Toast;
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
 import com.example.manue.elgourmet.fragments.RecetasFragment;
+import com.example.manue.elgourmet.fragments.detallefragment;
 
 
 public class MainActivity extends AppCompatActivity implements RecetasFragment.OnRecetaSelected {
+
+    boolean isMultiPanel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setMultiPanel();
+
     }
 
         @Override
         public void onChange(Receta receta) {
-            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-            intent.putExtra("Receta", receta);
-            startActivity(intent);
+
+
+            if(!isMultiPanel){
+                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                intent.putExtra("Receta", receta);
+                startActivity(intent);
+            }else{
+                detallefragment detailsFragment = (detallefragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
+                detailsFragment.mostrarReceta(receta);
+
+            }
+
+
         }
+
+    private void setMultiPanel(){
+        isMultiPanel = (getSupportFragmentManager().findFragmentById(R.id.detalleFragment) != null);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

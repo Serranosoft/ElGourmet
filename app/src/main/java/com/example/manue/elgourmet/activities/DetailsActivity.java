@@ -30,14 +30,14 @@ public class DetailsActivity  extends AppCompatActivity {
             fragment.mostrarReceta(receta);
         }
 
-        comentarios = findViewById(R.id.detalleBoton);
+        /*comentarios = findViewById(R.id.detalleBoton);
         comentarios.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(DetailsActivity.this, InsertarComentarioActivity.class);
                 startActivity(intent2);
             }
-        });
+        });*/
 
     }
 

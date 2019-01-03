@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Añadir receta"
+        android:text="@string/añadirReceta"
         android:id="@+id/popupInsertarRecetaTitulo"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/preview"
         android:id="@+id/popupInsertarRecetaImagen"
-        android:hint="Url de la Imagen...">
+        android:hint="@string/urlImagen">
 
 
 
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/popupInsertarRecetaImagen"
         android:id="@+id/popupInsertarRecetaNombre"
-        android:hint="Nombre...">
+        android:hint="@string/nombrePopup">
 
     </EditText>
 
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/popupInsertarRecetaNombre"
         android:id="@+id/popupInsertarRecetaIngredientes"
-        android:hint="Ingredientes...">
+        android:hint="@string/ingredientesPopup">
 
     </EditText>
     <EditText
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/popupInsertarRecetaIngredientes"
         android:id="@+id/popupInsertarRecetaElaboracion"
-        android:hint="Elaboracion...">
+        android:hint="@string/elaboracionPopup">
 
     </EditText>
 
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/popupInsertarRecetaElaboracion"
         android:id="@+id/popupInsertarRecetaAñadir"
-        android:text="Añadir"
+        android:text="@string/añadir"
         android:textColor="@android:color/white"
         android:background="@color/button_color">
 
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/popupInsertarRecetaAñadir"
         android:id="@+id/popupInsertarRecetaCancelar"
-        android:text="Cancelar"
+        android:text="@string/cancelar"
         android:textColor="@android:color/white"
         android:background="@color/button_color"
         android:layout_marginTop="10dp">

@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,13 +43,11 @@ public class RecetasFragment extends Fragment {
     private RecyclerView.Adapter adapter;
     private RecyclerView.Adapter adapter2;
     private OnRecetaSelected callback;
-
     private FloatingActionButton floating;
     private FloatingActionButton floatingRandom;
     private AlertDialog.Builder builder;
     private AlertDialog dialog;
-
-    private Button back;
+    private FloatingActionButton back;
 
 
     private static final String api = "https://www.themealdb.com/api/json/v1/1/latest.php";
@@ -59,14 +56,17 @@ public class RecetasFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
 
+
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
+
         View view = inflater.inflate(R.layout.fragment_recetas, container, false);
+
 
         rList = view.findViewById(R.id.lista);
 
@@ -85,14 +85,14 @@ public class RecetasFragment extends Fragment {
         });
 
         back = view.findViewById(R.id.back);
-        back.setVisibility(View.INVISIBLE);
+        back.hide();
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 getData();
-                back.setVisibility(View.INVISIBLE);
                 floating.show();
+                back.hide();
             }
         });
 
@@ -102,7 +102,8 @@ public class RecetasFragment extends Fragment {
             public void onClick(View v) {
 
                 getRandomData();
-                back.setVisibility(View.VISIBLE);
+
+                back.show();
                 floating.hide();
             }
         });
@@ -126,7 +127,6 @@ public class RecetasFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
                 getDataFilter(ingr.getText().toString());
 
                 dialog.dismiss();
@@ -140,7 +140,6 @@ public class RecetasFragment extends Fragment {
                 dialog.dismiss();
             }
         });
-
 
 
 
@@ -160,6 +159,7 @@ public class RecetasFragment extends Fragment {
                                 JSONObject receta = jsonArray.getJSONObject(i);
                                 String[] ingredientes = new String[20];
                                 String nombreReceta = receta.getString("strMeal");
+
                                 String imagenUrl = receta.getString("strMealThumb");
 
                                 ingredientes[0] = receta.getString("strIngredient1");
@@ -186,6 +186,8 @@ public class RecetasFragment extends Fragment {
                                 String elaboracion = receta.getString("strInstructions");
 
                                 String url = receta.getString("strSource");
+
+
 
                                 Receta r2 = new Receta(imagenUrl, nombreReceta, elaboracion, ingredientes, url);
                                 recetaLista.add(r2);
@@ -266,6 +268,7 @@ public class RecetasFragment extends Fragment {
 
                                 }
 
+
                                 Receta r2 = new Receta(imagenUrl, nombreReceta, elaboracion, ingredientes, url);
                                 if(filtrar){
                                     recetaLista.add(r2);
@@ -340,6 +343,8 @@ public class RecetasFragment extends Fragment {
                                 String elaboracion = receta.getString("strInstructions");
 
                                 String url = receta.getString("strSource");
+
+
 
                                 Receta r2 = new Receta(imagenUrl, nombreReceta, elaboracion, ingredientes, url);
                                     recetaLista.add(r2);
