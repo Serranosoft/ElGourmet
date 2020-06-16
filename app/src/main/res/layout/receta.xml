@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="230dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    android:weightSum="3"
+    android:id="@+id/cardview" >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#332d2d"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imagenReceta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/test"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#FFF" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:alpha="0.41">
+            </View>
+
+            <TextView
+
+                android:id="@+id/nombreReceta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="TITULO"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

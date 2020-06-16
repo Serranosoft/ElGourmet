@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/misrecetasImagen"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:background="@drawable/test"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FFF" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:alpha="0.41">
+
+    </View>
+    <TextView
+        android:id="@+id/misrecetasTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:textAllCaps="true"
+        android:text="Albondigas con Salsa"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/misrecetasIngredientesTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_below="@id/misrecetasImagen"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:text="AAAA"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/misrecetasEliminar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/delete"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/misrecetasImagen"
+        android:layout_marginRight="16dp"
+        android:textColor="#FFF"
+        />
+
+    <TextView
+        android:id="@+id/misrecetasIngredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/misrecetasIngredientesTitulo"
+        android:textColor="@android:color/white"
+        android:text=""
+        android:layout_marginRight="16dp"
+        android:textSize="12dp" />
+    <TextView
+        android:id="@+id/misrecetasElaboracionTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_below="@id/misrecetasIngredientes"
+        android:textColor="@android:color/white"
+        android:text="AAAA"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/misrecetasElaboracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/misrecetasElaboracionTitulo"
+        android:text=""
+        android:layout_marginRight="16dp"
+        android:textSize="12dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/misrecetasElaboracion"
+        android:background="@color/button_color"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+</RelativeLayout>

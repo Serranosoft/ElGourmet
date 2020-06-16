@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">El Gourmet</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_agregar">AgregarActivity</string>
+    <string name="title_activity_favoritos">Favoritos</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="anonimo">Anónimo</string>
+    <string name="porciones">Porciones</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="añadirComentario">Añadir comentario...</string>
+    <string name="enviar">Enviar</string>
+    <string name="filtrarIngrediente">Ingrediente...</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="mostrarRecetas">Mostrar todas las recetas</string>
+    <string name="filtrarRecetas">Filtrar recetas</string>
+    <string name="urlImagen">Url de la imagen...</string>
+    <string name="nombrePopup">Nombre...</string>
+    <string name="ingredientesPopup">Ingredientes...</string>
+    <string name="elaboracionPopup">Elaboracion...</string>
+    <string name="añadir">Añadir</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="añadirReceta">Añadir Receta</string>
+
+</resources>

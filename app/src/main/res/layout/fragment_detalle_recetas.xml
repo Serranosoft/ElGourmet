@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.detallefragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/detalleImagen"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:background="@drawable/test"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FFF" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:alpha="0.41">
+
+    </View>
+    <TextView
+        android:id="@+id/detalleTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:textAllCaps="true"
+        android:text="Albondigas con Salsa"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        />
+
+    <Button
+        android:id="@+id/iconoLink"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/link"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/detalleImagen"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:id="@+id/detallePorciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_below="@id/detalleImagen"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:text="@string/porciones"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/detalleTiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_below="@id/detallePorciones"
+        android:textColor="@android:color/white"
+        android:text="@string/tiempo"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+
+
+    <Button
+        android:id="@+id/detalleBoton"
+        android:text="@string/comentarios"
+        android:textColor="@android:color/white"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/detalleTiempo"
+        android:background="@color/button_color"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+
+</RelativeLayout>
+
+</ScrollView>
