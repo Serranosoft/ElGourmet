@@ -46,7 +46,11 @@
         android:layout_below="@id/misrecetasImagen"
         android:layout_marginTop="32dp"
         android:textColor="@android:color/white"
+<<<<<<< HEAD
         android:text="AAAA"
+=======
+        android:text="@string/ingredientes"
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
         android:textSize="16dp"
         android:textStyle="bold"/>
 
@@ -80,7 +84,11 @@
         android:layout_marginLeft="24dp"
         android:layout_below="@id/misrecetasIngredientes"
         android:textColor="@android:color/white"
+<<<<<<< HEAD
         android:text="AAAA"
+=======
+        android:text="@string/elaboracion"
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
         android:textSize="16dp"
         android:textStyle="bold"/>
 

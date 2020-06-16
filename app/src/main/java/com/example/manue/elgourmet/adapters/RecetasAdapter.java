@@ -48,7 +48,11 @@ public class RecetasAdapter extends RecyclerView.Adapter<RecetasAdapter.ViewHold
 
         viewHolder.nombreReceta.setText(receta.getNombreReceta());
 
+<<<<<<< HEAD
         String url = "https://spoonacular.com/recipeImages/"+receta.getImagenUrl();
+=======
+        String url = receta.getImagenUrl();
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
 
         Picasso.get().load(url).fit().into(viewHolder.imagenUrl);
 

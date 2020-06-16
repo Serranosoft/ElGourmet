@@ -1,6 +1,10 @@
 package com.example.manue.elgourmet.fragments;
 
 
+<<<<<<< HEAD
+=======
+import android.content.Context;
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,8 +43,13 @@ public class detallefragment extends Fragment {
 
     ImageView imagen;
     TextView titulo;
+<<<<<<< HEAD
     TextView porciones;
     TextView tiempo;
+=======
+    TextView ingredientes;
+    TextView elaboracion;
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
     Button link;
     Button comentarios;
     String url;
@@ -63,17 +72,25 @@ public class detallefragment extends Fragment {
 
         imagen = view.findViewById(R.id.detalleImagen);
         titulo = view.findViewById(R.id.detalleTitulo);
+<<<<<<< HEAD
         porciones = view.findViewById(R.id.detallePorciones);
         tiempo = view.findViewById(R.id.detalleTiempo);
         link = view.findViewById(R.id.iconoLink);
         comentarios = view.findViewById(R.id.detalleBoton);
 
+=======
+        ingredientes = view.findViewById(R.id.detalleIngredientes);
+        elaboracion = view.findViewById(R.id.detalleElaboracion);
+        link = view.findViewById(R.id.iconoLink);
+        comentarios = view.findViewById(R.id.detalleBoton);
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
         return view;
     }
 
 
     public void mostrarReceta(final Receta receta){
 
+<<<<<<< HEAD
         url = receta.getImagenUrl();
         Picasso.get().load(url).fit().into(imagen);
 
@@ -82,6 +99,23 @@ public class detallefragment extends Fragment {
         tiempo.setText(receta.getTiempo());
         web = receta.getUrl();
 
+=======
+        ingredientes.setText("");
+        url = receta.getImagenUrl();
+        Picasso.get().load(url).fit().into(imagen);
+        titulo.setText(receta.getNombreReceta());
+        for (int i = 0; i<20;i++){
+            if(receta.getIngredientes()[i].equals("")){
+
+            }else{
+                ingredientes.append("• "+receta.getIngredientes()[i]+"\n"+"\n");
+
+            }
+
+        }
+        elaboracion.setText(receta.getInstruccionesReceta());
+        web = receta.getUrl();
+>>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
