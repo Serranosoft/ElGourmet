@@ -5,11 +5,10 @@ import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.ViewGroup;
 
 import com.example.manue.elgourmet.R;
 
-public class StartActivity extends AppCompatActivity {
+public class InitializingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +20,9 @@ public class StartActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                final Intent mainIntent = new Intent(StartActivity.this, MainActivity.class);
-                StartActivity.this.startActivity(mainIntent);
-                StartActivity.this.finish();
+                final Intent mainIntent = new Intent(InitializingActivity.this, LoginActivity.class);
+                InitializingActivity.this.startActivity(mainIntent);
+                InitializingActivity.this.finish();
             }
         }, 1850);
     }

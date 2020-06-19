@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/recetasFragment"
-        android:name="com.example.manue.elgourmet.fragments.RecetasFragment"
+        android:name="com.example.manue.elgourmet.Fragments.RecipesFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/detalleFragment"
-        android:name="com.example.manue.elgourmet.fragments.detallefragment"
+        android:name="com.example.manue.elgourmet.Fragments.InfoRecipeFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

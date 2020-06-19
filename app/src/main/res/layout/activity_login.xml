@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:background="@mipmap/background"
+    tools:context=".activities.LoginActivity">
+
+
+
+    <ImageView
+        android:src="@mipmap/elgourmet"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/colorSelected">
+
+        <EditText
+            android:id="@+id/login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Usuario"
+            android:textColorHint="@color/black"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/colorSelected">
+        <EditText android:id="@+id/login_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Contraseña"
+            android:textColorHint="@color/black"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/iniciar_sesion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorSelected"
+        android:background="@color/background_profile"
+        android:text="Iniciar Sesion"/>
+
+    <Button
+        android:id="@+id/register_boton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorSelected"
+        android:background="@color/background_profile"
+        android:text="Registrarse"/>
+
+</LinearLayout>

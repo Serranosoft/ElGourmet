@@ -7,12 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
-import com.example.manue.elgourmet.fragments.detallefragment;
+import com.example.manue.elgourmet.Fragments.InfoRecipeFragment;
 
 public class DetailsActivity  extends AppCompatActivity {
 
@@ -26,7 +25,7 @@ public class DetailsActivity  extends AppCompatActivity {
 
         if(intent != null){
             Receta receta = (Receta) intent.getSerializableExtra("Receta");
-            detallefragment fragment = (detallefragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
+            InfoRecipeFragment fragment = (InfoRecipeFragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
             fragment.mostrarReceta(receta);
         }
 

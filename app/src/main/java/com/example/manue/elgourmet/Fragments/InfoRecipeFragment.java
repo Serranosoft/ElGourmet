@@ -1,7 +1,6 @@
-package com.example.manue.elgourmet.fragments;
+package com.example.manue.elgourmet.Fragments;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,24 +15,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.example.manue.elgourmet.activities.DetailsActivity;
 import com.example.manue.elgourmet.activities.InsertarComentarioActivity;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import com.example.manue.elgourmet.Util.Receta;
 import com.example.manue.elgourmet.R;
-import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class detallefragment extends Fragment {
+public class InfoRecipeFragment extends Fragment {
 
 
-    public detallefragment() {
+    public InfoRecipeFragment() {
         // Required empty public constructor
     }
 
@@ -42,8 +37,6 @@ public class detallefragment extends Fragment {
     TextView titulo;
     TextView porciones;
     TextView tiempo;
-    TextView ingredientes;
-    TextView elaboracion;
     Button link;
     Button comentarios;
     String url;
@@ -70,9 +63,6 @@ public class detallefragment extends Fragment {
         tiempo = view.findViewById(R.id.detalleTiempo);
         link = view.findViewById(R.id.iconoLink);
         comentarios = view.findViewById(R.id.detalleBoton);
-
-        ingredientes = view.findViewById(R.id.detalleIngredientes);
-        elaboracion = view.findViewById(R.id.detalleElaboracion);
         link = view.findViewById(R.id.iconoLink);
         comentarios = view.findViewById(R.id.detalleBoton);
         return view;
@@ -80,17 +70,14 @@ public class detallefragment extends Fragment {
 
 
     public void mostrarReceta(final Receta receta){
-
         url = receta.getImagenUrl();
         Picasso.get().load(url).fit().into(imagen);
 
         titulo.setText(receta.getNombreReceta());
-        porciones.setText(receta.getPorciones());
-        tiempo.setText(receta.getTiempo());
+        porciones.setText("porciones: "+receta.getPorciones());
+        tiempo.setText("tiempo de elaboración: " +receta.getTiempo()+" minutos");
         web = receta.getUrl();
-
-        ingredientes.setText("");
-        url = receta.getImagenUrl();
+        url = "https://spoonacular.com/recipeImages/"+receta.getImagenUrl();
         Picasso.get().load(url).fit().into(imagen);
         titulo.setText(receta.getNombreReceta());
 

@@ -1,4 +1,4 @@
-package com.example.manue.elgourmet.fragments;
+package com.example.manue.elgourmet.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class RecetasFragment extends Fragment {
+public class RecipesFragment extends Fragment {
 
     private RecyclerView rList;
     private List<Receta> recetaLista;

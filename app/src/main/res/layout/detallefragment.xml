@@ -14,7 +14,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragments.detallefragment">
+    tools:context=".Fragments.InfoRecipeFragment">
 
 
     <ImageView

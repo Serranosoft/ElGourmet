@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.manue.elgourmet.R;
 import com.example.manue.elgourmet.Util.Receta;
-import com.example.manue.elgourmet.fragments.RecetasFragment;
-import com.example.manue.elgourmet.fragments.detallefragment;
+import com.example.manue.elgourmet.Fragments.RecipesFragment;
+import com.example.manue.elgourmet.Fragments.InfoRecipeFragment;
 
 
-public class MainActivity extends AppCompatActivity implements RecetasFragment.OnRecetaSelected {
+public class MainActivity extends AppCompatActivity implements RecipesFragment.OnRecetaSelected {
 
     boolean isMultiPanel;
 
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements RecetasFragment.O
                 intent.putExtra("Receta", receta);
                 startActivity(intent);
             }else{
-                detallefragment detailsFragment = (detallefragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
+                InfoRecipeFragment detailsFragment = (InfoRecipeFragment) getSupportFragmentManager().findFragmentById(R.id.detalleFragment);
                 detailsFragment.mostrarReceta(receta);
 
             }

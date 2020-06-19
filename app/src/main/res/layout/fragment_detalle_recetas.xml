@@ -14,7 +14,7 @@
     android:layout_height="wrap_content"
     android:background="@color/background"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragments.detallefragment"
+    tools:context=".Fragments.InfoRecipeFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -27,20 +27,15 @@
         android:gravity="center"
         android:textAlignment="center"
         android:textColor="#FFF" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:alpha="0.41">
 
-    </View>
     <TextView
         android:id="@+id/detalleTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:textSize="16dp"
+        android:layout_below="@id/detalleImagen"
+        android:textSize="24dp"
         android:textAllCaps="true"
         android:text="Albondigas con Salsa"
         android:textColor="@android:color/white"
@@ -55,7 +50,7 @@
         android:background="@drawable/link"
         android:layout_alignParentRight="true"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/detalleImagen"
+        android:layout_below="@id/detalleTitulo"
         android:layout_marginRight="16dp"
         />
 
@@ -64,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
-        android:layout_below="@id/detalleImagen"
+        android:layout_below="@id/detalleTitulo"
         android:layout_marginTop="32dp"
         android:textColor="@android:color/white"
         android:text="@string/porciones"
@@ -77,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
         android:layout_below="@id/detallePorciones"
         android:textColor="@android:color/white"
         android:text="@string/tiempo"

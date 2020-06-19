@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/detalleFragment"
-        android:name="com.example.manue.elgourmet.fragments.detallefragment"
+        android:name="com.example.manue.elgourmet.Fragments.InfoRecipeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
