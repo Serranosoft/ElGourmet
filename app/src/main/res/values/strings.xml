@@ -9,13 +9,8 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
     <string name="anonimo">Anónimo</string>
-<<<<<<< HEAD
     <string name="porciones">Porciones</string>
     <string name="tiempo">Tiempo</string>
-=======
-    <string name="ingredientes">Ingredientes</string>
-    <string name="elaboracion">Elaboracion</string>
->>>>>>> 2d84e4012000c2234d28842114a8444d39e00c1b
     <string name="comentarios">Comentarios</string>
     <string name="añadirComentario">Añadir comentario...</string>
     <string name="enviar">Enviar</string>
